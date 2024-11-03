@@ -3,90 +3,35 @@ html, body {
     padding: 0;
     height: 100%;
     overflow-x: hidden;
-    font-family: "Oswald", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Add Oswald font before fallback fonts */
-
+    font-family: "Oswald", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: url('/images/grass.jpg'); 
+    background-size: cover; 
+    background-position: center;
 }
+
 .navbar {
-    display: flex;
-    align-items: center;
-    background-color: #333;
-    padding: 0 20px; /* Add horizontal padding if needed */
-
+    display: none; 
 }
-
-.navbar .logo {
-    float: left; /* Aligns the logo to the left */
-    display: block; /* Ensures proper alignment and spacing */
-    height: 50px; /* Adjust the height as needed */
-    padding: 14px 20px; /* Adds padding around the logo */
-}
-
-.navbar a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 80px;
-    font-size: 18px;
-    text-decoration: none;
-
-}
-
-.navbar a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-
-.background-video
-{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-}
-
-#bg-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    
-}
-
 
 .main-content {
+    padding-top: 200px;
     position: relative;
-    z-index: 1;
-    color: white; /* Make sure the text is visible over the video */
+    color: white;
     text-align: center;
-    font-weight: 300;
+    font-weight: 100;
     font-size: 40px;
+    
 }
 
-
-.mid-buttons
-{
-    padding: 350px;
+.mid-buttons {
     display: flex;
-    gap:400px;
+    gap: 400px;
     justify-content: center;
-    
 }
 
 .button {
-    background-color: transparent; /* Green */
-    border: none;
+    background-color: transparent; 
+    border: 2px solid white; 
     color: white;
     padding: 15px 32px;
     text-align: center; 
@@ -94,14 +39,18 @@ html, body {
     display: inline-block;
     font-size: 16px;
     font-weight: 900;
-    border: 2px solid black;
-  }
+    transition: background-color 0.3s ease; 
+    width: 100px; 
+}
 
-  .button .arrow
-  {
+.button:hover {
+    background-color: white; 
+    color: black; 
+}
+
+.button .arrow {
     margin-left: 15px;
-  }
-
+}
 
 .button::before,
 .button::after {
@@ -109,15 +58,15 @@ html, body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 10px; /* Width of the gaps */
-    height: 1px; /* Height of the pseudo-elements */
-    background-color: #000; /* Match the background color */
+    width: 10px;
+    height: 1px;
+    background-color: #000;
 }
 
 .button::before {
-    left: -11px; /* Positioning to create gap on the left */
+    left: -11px;
 }
 
 .button::after {
-    right: -11px; /* Positioning to create gap on the right */
+    right: -11px;
 }
